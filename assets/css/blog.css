@@ -1,144 +1,117 @@
-.Mheader {
-	width: auto;
-	height: 110px;
-	margin: 10px 10px;
-	padding-bottom: 10px;
-
-	border-bottom: 1px solid;
-	border-color: gainsboro;
-
+body {
+	font-family:proxima-nova, sans-serif;
+	min-width: 320px;
 }
 
+/* HEADER =================================*/
 .header {
+	position: relative;
 	width: auto;
 	height: 90px;
-	margin: 40px 30px;
-	padding-bottom: 20px;
-
-	border-bottom: 1px solid;
-	border-color: gainsboro;
-
+	padding: 40px 30px 50px;
+	border-bottom: 1px solid gainsboro;
 }
 
-.Mheader h1 {
-	font-family:proxima-nova-i1, proxima-nova, sans-serif;
+.mobile .header {
+	height: 110px;
+	padding: 10px 10px 20px;
+	margin-bottom: 40px;
+	border-bottom: 1px solid gainsboro;
+}
+
+.header h1 {
   	font-style: italic;
   	font-weight: 100;
+  	font-size: 3em;
+	color: grey;
+	float: left;
+	white-space: nowrap;
+}
+
+.mobile .header h1 {
   	font-size: 3.5em;
 	color: gainsboro;
-	float: left;
 	margin-top: 50px;
 	
 }
 
-.header h1 {
-	font-family:proxima-nova-i1, proxima-nova, sans-serif;
-  	font-style: italic;
+.header .caps {
   	font-weight: 100;
-  	font-size: 3em;
-	color: grey;
-	float: left;
-	
-}
-
-.Mcaps {
-	width: 100%;
-	position: absolute;
-	left: 280px;
-	top: 73px;
-	font-size: 2.5em;
-	font-family:proxima-nova-n1, proxima-nova, sans-serif;
-  	font-weight: 100;
-	margin-top: 0px;
-	color: grey;
-}
-
-
-.caps {
-
-	font-family:proxima-nova-n1, proxima-nova, sans-serif;
-  	font-weight: 100;
-  	font-size: 3em;
 	color: gainsboro;
-	float: left;
 	margin: 33px 20px;
 
 }
 
-.Mnav {
-	position: absolute;
-	left: 10px;
-	top: 130px;
+.mobile .header .caps {
+	color: grey;
 }
 
-.nav {
+/* NAV =================================*/
+
+nav {
 	position: absolute;
 	right: 100px;
-	top: 163px;
+	bottom:-45px;
+	height:45px;	
 }
 
-.Mnav a {
-	font-family:proxima-nova, sans-serif;
-	font-weight: 300;
-	font-size: .9em;
-	color: grey;
-	text-decoration: none;
-
-	padding:7px;
-	border: 1px solid;
-	border-color: gainsboro;
-	margin: 0px;
-	background: white;
-	float: left;
-
-
-}
-
-.nav a {
-	font-family:proxima-nova, sans-serif;
+nav a {
 	font-weight: 300;
 	font-size: 1em;
-	color: grey;
+	float: left;
 	text-decoration: none;
-
-	padding:12px;
-	border: 1px solid;
-	border-color: gainsboro;
-	margin: 5px;
+	border: 1px solid gainsboro;
+	color: grey;
 	background: white;
-
-
+	margin:0 10px;
+	height:100%;
+	line-height: 45px;
+	padding:0 14px;
 }
 
-.Mnav a:hover,
-.nav a:hover{
+.mobile nav {
+	left:10px;
+	right:auto;
+	bottom: -35px;
+	height:35px;
+}
+
+.mobile nav a {
+	font-size: .9em;
+	text-decoration: none;
+	border-left:none;
+	line-height: 35px;
+	margin:0;
+	padding:0 8px;
+}
+
+.mobile nav a:first-child {
+	border-left: 1px solid gainsboro;
+}
+
+nav a:hover {
 	color: #23b6a6;
 }
 
-.Mcontent {
-	font-family:proxima-nova, sans-serif;
-	font-weight: 300;
-	font-size: 1em;
-	color: black;
-	margin: 20px 20px;
-	margin-top: 80px;
+/* MAIN =================================*/
 
-}
-
-
-.content {
-	font-family:proxima-nova, sans-serif;
+section {
 	font-weight: 300;
 	font-size: 1em;
 	color: black;
 	margin: 100px 60px;
 	margin-top: 80px;
+	width: 500px;
+	min-width: 300px;
 
 }
 
-.content a, 
-.Mcontent a {
-	font-family:proxima-nova, sans-serif;
+.mobile section {
+	margin: 20px 20px;
+	width: auto;
+}
+
+section a {
 	font-weight: 300;
 	font-size: 1.3em;
 	color: #23b6a6;
@@ -147,35 +120,38 @@
 
 }
 
-.content a:hover, 
-.Mcontent a:hover{
+section a:hover {
 	color: midnightblue;
 }
 
-.content span,
-.Mcontent span {
+section span {
 	font-weight: 300;
 	font-size: 1em;
 	color: grey;
 
 }
 
-
-.content h2,
-.Mcontent h2 {
+section h2 {
 	color: dimgrey;
 	font-weight: 300;
 	font-size: 2em;
 }
 
+section h3 {
+	margin:10px 0;
+}
 
+section small.date {
+	margin:10px 0;
+	font-size: 14px;
+}
 
+section p {
+	margin:10px 0;
+	line-height: 20px;
+}
 
-
-
-
-
-
-
-
-
+section li {
+	margin-left: 20px;
+	line-height: 20px;
+}

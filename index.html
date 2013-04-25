@@ -13,6 +13,10 @@ title: "Intentionjs Blog"
                 {{ post.title }}
             </a>
         </h3>
+        <p> 
+            {{post.snippet}} 
+            <a href="{{ post.url }}">more...</a>
+        </p>
     </li>
     {% endfor %}
 </ul>

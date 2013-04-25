@@ -13,46 +13,21 @@
 <title>{{ title }}</title>
 
 </head>
-<body>	
-
-<div class="header"
-intent
-in-mobile-class="Mheader"
-in-tablet-class="header"
-in-standard-class="header">
+<body intent in-width>
 	
-	<h1>Intentionjs</h1>
-	
-	
-	<div class="caps"
-	intent
-	in-mobile-class="Mcaps"
-	in-tablet-class="caps"
-	in-standard-class="caps">BLOG</div>
-
-</div>
-	
-
-<div class="nav"
-intent
-in-mobile-class="Mnav"
-in-tablet-class="nav"
-in-standard-class="nav">
-
-	
-	<a href="documentation.html" intent in-mobile-href="documentation.html#content">DOCUMENTATION</a>	
-	
-	<a href="examples.html" intent in-mobile-href="examples.html#content">EXAMPLES</a>
+	<div class="header">
+		
+		<h1>Intentionjs <span class="caps">BLOG</span></h1>
+		
+		{% include nav.html %}
 	</div>
 
 
-<div class="content"
-intent
-in-mobile-class="Mcontent"
-in-tablet-class="content"
-in-standard-class="content">
-{{content}}
-</div>
+
+
+<section>
+	{{content}}
+</section>
 
 
 	<script data-main="main" src="test/vendor/require.js"></script>

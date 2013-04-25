@@ -2,60 +2,35 @@
 <html lang="en">
 <head>
 	
-	<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1"><meta charset="utf-8" /> 
-
-	<link href="/assets/css/blog.css" rel="stylesheet">
+	<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+	<meta charset="utf-8" /> 
+	<link href="/assets/css/reset.css" rel="stylesheet">
 	<link href="/assets/css/responsivegrid.css" rel="stylesheet">
 	<link href="/assets/css/github-flavored-markdown.css" rel="stylesheet">
 
-   <script type="text/javascript" src="//use.typekit.net/wdy0odx.js"></script>
+	<link href="/assets/css/blog.css" rel="stylesheet">
+
+   	<script type="text/javascript" src="//use.typekit.net/wdy0odx.js"></script>
 	<script type="text/javascript">try{Typekit.load();}catch(e){}</script>
 
-<title>{{ title }}</title>
+	<title>{{ page.title }}</title>
 
 </head>
-<body>	
+<body intent in-width>
 
-<div class="header"
-intent
-in-mobile-class="Mheader"
-in-tablet-class="header"
-in-standard-class="header">
-	
-	<h1>Intentionjs</h1>
-	
-	
-	<div class="caps"
-	intent
-	in-mobile-class="Mcaps"
-	in-tablet-class="caps"
-	in-standard-class="caps">BLOG</div>
-
-</div>
-	
-
-<div class="nav"
-intent
-in-mobile-class="Mnav"
-in-tablet-class="nav"
-in-standard-class="nav">
-
-	<a href="/index.html" intent in-mobile-href="index.html#content">MAIN</a>
-	
-	<a href="/documentation.html" intent in-mobile-href="documentation.html#content">DOCUMENTATION</a>	
-	
-	<a href="/examples.html" intent in-mobile-href="examples.html#content">EXAMPLES</a>
+	<div class="header">
+		
+		<h1>Intentionjs <span class="caps">BLOG</span></h1>
+		
+		{% include nav.html %}
 	</div>
 
-
-<div class="content"
-intent
-in-mobile-class="Mcontent"
-in-tablet-class="content"
-in-standard-class="content">
-{{content}}
-</div>
-
+	<section>
+		<h2>{{page.title}}</h2>
+		<h3><small>by</small> {{page.author}}</h3>
+		<small class="date">{{page.date | date_to_string }}</small>
+		{{content}}
+	</section>
 
 	<script data-main="/main" src="/test/vendor/require.js"></script>
 	<script type="text/javascript">
@@ -69,7 +44,6 @@ in-standard-class="content">
 	    ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
 	    var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
 	  })();
-
 	</script>
 </body>	
 </html>
